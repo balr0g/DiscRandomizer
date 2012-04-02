@@ -4,13 +4,15 @@ import java.util.List;
 
 import org.bukkit.entity.Creeper;
 import org.bukkit.event.entity.EntityDeathEvent;
-import org.bukkit.event.entity.EntityListener;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
 import org.bukkit.inventory.ItemStack;
 
-public class DiscEntityListener extends EntityListener {
+public class DiscEntityListener implements Listener {
 	
 	public boolean isEnabled = false;
 	
+	@EventHandler
 	public void onEntityDeath(EntityDeathEvent e)
 	{
 		if(isEnabled)
